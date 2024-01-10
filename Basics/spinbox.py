@@ -4,7 +4,7 @@ from tkinter import ttk
 window = tk.Tk()
 window.title("Spin box")
 window.resizable(False, False)
-window.geometry('300x300')
+window.geometry('300x500')
 
 
 """ 
@@ -88,7 +88,7 @@ spinBox6 = tk.Spinbox(
     textvariable=spin_var6, 
     values=("Apple", "Banana", "Orange", "Grapes", "Strawberry"), wrap=True, font='Poppins 13'
   )
-
+spinBox6.pack(fill=tk.X, padx=10, pady=10)
 # steops number (increment)
 spin_var7 = tk.StringVar();
 spinBox7 = ttk.Spinbox(
@@ -103,7 +103,7 @@ spinBox7 = ttk.Spinbox(
   )
 spinBox7.pack(fill=tk.X, padx=10, pady=10)
 spinBox7['justify'] = 'center'
-
+spinBox7.pack(fill=tk.X, padx=10, pady=10)
 """ 
 we also can set values from outside like 
 
@@ -122,10 +122,15 @@ values ===>> you can pass values of the spin to sequntial to as an touple Exampl
 We can also update or pass them after creating the widget like
 
 widget['property_name'] = property_value
+
+Events ==========================
+<<Increment>>
+<<Decrement>>
+
 """
 
-spinBox6.pack(fill=tk.X, padx=10, pady=10)
-
+spinBox7.bind('<<Increment>>', lambda e: print("up"))
+spinBox7.bind('<<Decrement>>', lambda e: print(e))
 
 button1 = tk.Button(
     window, 
