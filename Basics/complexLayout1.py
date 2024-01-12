@@ -4,6 +4,7 @@ from tkinter import ttk
 window = tk.Tk()
 window.title('Complex Layout 1')
 window.geometry('600x450')
+window.minsize(600, 400)
 
 main_frame = ttk.Frame(window)
 main_frame.pack(expand=True, fill="both", padx=10, pady=10)
