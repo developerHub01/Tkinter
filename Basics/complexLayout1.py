@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 
 window = tk.Tk()
-window.title('Progress Bar')
+window.title('Complex Layout 1')
 window.geometry('600x450')
 
 main_frame = ttk.Frame(window)
